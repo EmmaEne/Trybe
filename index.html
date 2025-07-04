@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your App - Sign Up</title>
+    <link href="./bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="">
+    <div class="container-fluid min-vh-100 d-flex align-items-center justify-content-center mb-5">
+        <div class="row w-100">
+            <!-- Left Image -->
+            <div class="col-lg-6 d-none d-lg-block p-0">
+                <img src="./images/svgs/learning-app.svg" alt="Learning Illustration"
+                    class="img-fluid h-100 w-100 object-fit-cover text-center">
+            </div>
+
+            <!-- Signup Form -->
+            <div class="col-lg-6 d-flex flex-column align-items-center justify-content-center p-4"
+                id="signup-container">
+                <div class="login-container text-center w-100" style="max-width: 350px;">
+                    <a href="#" class="logo navbar-brand">TRYBE</a>
+                    <p class="mb-3 mt-3 text-secondary">Sign up to see resources from your friends.</p>
+                    <button type="button" class="btn login-fb w-100 mb-3">
+                        <i class="fa-brands fa-facebook"></i>
+                        Log in with Facebook
+                    </button>
+                    <div class="divider my-3">OR</div>
+                    <form class="mt-3">
+                        <div class="mb-2">
+                            <input type="text" class="form-control" placeholder="Mobile Number or Email" required>
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control" placeholder="Username" required>
+                        </div>
+                        <div class="mb-2">
+                            <input type="password" class="form-control" placeholder="Password" required>
+                        </div>
+
+                        <small class="text-secondary d-block mt-3 mb-3">People who use our service may have uploaded
+                            your
+                            contact
+                            information to Trybe. <a href="#"> Learn More</a></small>
+                        <small class="text-secondary">By signing up, you agree to our <a href="#">Terms , Privacy
+                                Policy </a> and <a href="#"> Cookies Policy.</a></small>
+                        <button type="submit" class="btn btn-primary w-100 mt-3">Sign Up</button>
+
+                </div>
+                </form>
+                <div class=" mt-4 p-3 w-100 text-center" style="max-width: 350px;">
+                    <p class="mb-0">Have an account? <br><a href="signin.html">Log in</a></p>
+                </div>
+                <!-- Dark Mode Button -->
+                <button id="darkModeToggle" class="dark-mode-toggle">
+                    <i class="fa fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="auth-footer mt-5">
+        <div class="container text-center">
+            <ul class="footer-links list-inline mb-2">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Courses</a></li>
+                <li class="list-inline-item"><a href="#">Contact</a></li>
+                <li class="list-inline-item"><a href="#">Help</a></li>
+                <li class="list-inline-item"><a href="#">Become a creator</a></li>
+                <li class="list-inline-item"><a href="#">Press</a></li>
+                <li class="list-inline-item"><a href="#">API</a></li>
+                <li class="list-inline-item"><a href="#">Jobs</a></li>
+                <li class="list-inline-item"><a href="#">Privacy</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Locations</a></li>
+                <li class="list-inline-item"><a href="#">Language</a></li>
+            </ul>
+            <small class="text-secondary d-block">&copy; 2024 YourApp</small>
+        </div>
+    </footer>
+
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="darkmode.js"></script>
+</body>
+
+</html>

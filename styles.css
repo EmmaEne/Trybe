@@ -1,0 +1,220 @@
+@font-face {
+  font-family: playfair;
+  src: url('./Playfair_Display/static/PlayfairDisplay-Medium.ttf');
+}
+
+@font-face {
+  font-family: poppins;
+  src: url('./poppins/Poppins-Medium.ttf');
+}
+
+body {
+  background-color: #fafafa;
+  font-family: poppins;
+}
+
+body.dark-mode {
+  background-color: #121212 !important;
+  color: #e0e0e0;
+}
+
+body.dark-mode .bg-white {
+  background-color: #1f1f1f !important;
+  color: #e0e0e0;
+}
+
+body.dark-mode .form-control {
+  background-color: #2c2c2c;
+  color: #fff;
+  border-color: #444;
+}
+
+body.dark-mode .form-control::placeholder {
+  color: #aaa;
+}
+
+body.dark-mode .btn-primary {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+body.dark-mode .btn-outline-primary {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+body.dark-mode .divider {
+  color: #aaa;
+}
+
+/* Dark mode styling */
+body.dark-mode .store-badge-container {
+  background: #2c2c2c;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+body.dark-mode .store-badge-container .icon {
+  color: #f0f0f0;
+}
+
+body.dark-mode .store-badge-container .text small,
+body.dark-mode .store-badge-container .text strong {
+  color: #e0e0e0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.img-fluid.object-fit-cover {
+  object-fit: cover;
+}
+
+.login-container {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+}
+
+.login-fb {
+  background: #0054d1;
+  color: white;
+}
+
+.signin {
+  color: #0054d1;
+  font-weight: bold;
+}
+
+.signin i {
+  color: #0054d1;
+}
+
+.logo {
+  max-width: 175px;
+  font-size: 35px;
+  font-family: playfair;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #999;
+}
+.divider::before, .divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #3e3d3d;
+}
+.divider::before {
+  margin-right: .25em;
+}
+.divider::after {
+  margin-left: .25em;
+}
+
+.store-badge {
+  height: 40px;
+}
+
+.store-badge-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 6px;
+  padding: 6px 10px;
+  background: white;
+  min-width: 150px;
+  transition: background 0.3s, border 0.3s;
+}
+
+.store-badge-container .icon {
+  font-size: 24px;
+  margin-right: 8px;
+  color: #333;
+}
+
+.store-badge-container .text small {
+  display: block;
+  font-size: 10px;
+  color: #555;
+  line-height: 1;
+}
+
+.store-badge-container .text strong {
+  font-size: 14px;
+  color: #000;
+  line-height: 1.2;
+}
+
+
+.btn-primary {
+  background-color: #0095f6;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #007cd1;
+}
+
+.auth-footer {
+  font-size: 13px;
+  color: #8e8e8e;
+  padding: 20px 0;
+}
+
+.auth-footer a {
+  color: #8e8e8e;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Dark mode styles */
+body.dark-mode .auth-footer {
+  color: #999;
+}
+
+body.dark-mode .auth-footer a {
+  color: #999;
+}
+
+/* Floating Toggle Button */
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode-toggle i {
+  font-size: 20px;
+  color: #333;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #f0f0f0;
+}
+
+/* Dark Mode style for toggle */
+body.dark-mode .dark-mode-toggle {
+  background-color: #2c2c2c;
+}
+
+body.dark-mode .dark-mode-toggle i {
+  color: #f0f0f0;
+}
+
