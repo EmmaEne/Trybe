@@ -11,7 +11,8 @@
 </head>
 
 <body class="">
-    <div class="container-fluid min-vh-100 d-flex align-items-center justify-content-center mb-5">
+    <!-- Desktop View -->
+    <div class="container-fluid min-vh-100 d-none d-md-flex align-items-center justify-content-center mb-5">
         <div class="row w-100">
             <!-- Left Image -->
             <div class="col-lg-6 d-none d-lg-block p-0">
@@ -54,37 +55,107 @@
                 <div class=" mt-4 p-3 w-100 text-center" style="max-width: 350px;">
                     <p class="mb-0">Have an account? <br><a href="signin.html">Log in</a></p>
                 </div>
+
+
+                <footer class="auth-footer mt-5">
+                    <div class="container text-center">
+                        <ul class="footer-links list-inline mb-2">
+                            <li class="list-inline-item"><a href="#">Home</a></li>
+                            <li class="list-inline-item"><a href="#">About</a></li>
+                            <li class="list-inline-item"><a href="#">Courses</a></li>
+                            <li class="list-inline-item"><a href="#">Contact</a></li>
+                            <li class="list-inline-item"><a href="#">Help</a></li>
+                            <li class="list-inline-item"><a href="#">Become a creator</a></li>
+                            <li class="list-inline-item"><a href="#">Press</a></li>
+                            <li class="list-inline-item"><a href="#">API</a></li>
+                            <li class="list-inline-item"><a href="#">Jobs</a></li>
+                            <li class="list-inline-item"><a href="#">Privacy</a></li>
+                            <li class="list-inline-item"><a href="#">Terms</a></li>
+                            <li class="list-inline-item"><a href="#">Locations</a></li>
+                            <li class="list-inline-item"><a href="#">Language</a></li>
+                        </ul>
+                        <small class="text-secondary d-block">&copy; 2024 YourApp</small>
+                    </div>
+                </footer>
                 <!-- Dark Mode Button -->
-                <button id="darkModeToggle" class="dark-mode-toggle">
+                <!-- Desktop View -->
+                <button class="dark-mode-toggle">
                     <i class="fa fa-moon"></i>
                 </button>
             </div>
         </div>
     </div>
 
-    <footer class="auth-footer mt-5">
-        <div class="container text-center">
-            <ul class="footer-links list-inline mb-2">
-                <li class="list-inline-item"><a href="#">Home</a></li>
-                <li class="list-inline-item"><a href="#">About</a></li>
-                <li class="list-inline-item"><a href="#">Courses</a></li>
-                <li class="list-inline-item"><a href="#">Contact</a></li>
-                <li class="list-inline-item"><a href="#">Help</a></li>
-                <li class="list-inline-item"><a href="#">Become a creator</a></li>
-                <li class="list-inline-item"><a href="#">Press</a></li>
-                <li class="list-inline-item"><a href="#">API</a></li>
-                <li class="list-inline-item"><a href="#">Jobs</a></li>
-                <li class="list-inline-item"><a href="#">Privacy</a></li>
-                <li class="list-inline-item"><a href="#">Terms</a></li>
-                <li class="list-inline-item"><a href="#">Locations</a></li>
-                <li class="list-inline-item"><a href="#">Language</a></li>
-            </ul>
-            <small class="text-secondary d-block">&copy; 2024 YourApp</small>
+    <!-- end of desktop view -->
+
+    <!-- Mobile View (visible on screens < 768px) -->
+    <div class="mobile-signup d-flex d-md-none">
+        <div class="mobile-step-container">
+            <!-- Welcome Step -->
+            <div class="step step-0 active">
+                <a href="#" class="logo navbar-brand text-center mb-5">TRYBE</a>
+                <p class="text-center mb-5 subtext">Sign up to <span id="gradient">see and interact with resources from
+                        your friends.</span>
+                </p>
+                <button class="btn btn-primary w-100 next-btn">Open Trybe</button>
+                <p class="text-center mt-3" style="font-size: 14px;">
+                     <a href="#">Log in</a> or
+                    <a href="#">Signup</a>
+                </p>
+            </div>
+
+            <!-- Step 1: Email -->
+            <div class="step step-1">
+                <input type="text" class="form-control mb-3" placeholder="Mobile Number or Email" />
+                <button class="btn btn-primary w-100 next-btn">Next</button>
+            </div>
+
+            <!-- Step 2: Username -->
+            <div class="step step-2">
+                <input type="text" class="form-control mb-3" placeholder="Username" />
+                <button class="btn btn-primary w-100 next-btn">Next</button>
+            </div>
+
+            <!-- Step 3: Password -->
+            <div class="step step-3">
+                <input type="password" class="form-control mb-3" placeholder="Password" />
+                <button class="btn btn-primary w-100 submit-btn">Sign Up</button>
+            </div>
+
+            <!-- <p class="small text-center mt-3">
+                By signing up, you agree to our <a href="#">Terms</a>,
+                <a href="#">Privacy Policy</a>, and <a href="#">Cookies Policy</a>.
+            </p> -->
         </div>
-    </footer>
+
+        <!-- Dark Mode Button -->
+        <!-- Mobile View -->
+        <button class="dark-mode-toggle">
+            <i class="fa fa-moon"></i>
+        </button>
+
+    </div>
+
 
     <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="darkmode.js"></script>
+    <script>
+        // Progressive steps logic
+        document.querySelectorAll(".mobile-step-container .next-btn").forEach((btn, index) => {
+            btn.addEventListener("click", () => {
+                const steps = document.querySelectorAll(".mobile-step-container .step");
+                steps[index].classList.remove("active");
+                steps[index + 1].classList.add("active");
+            });
+        });
+
+        // Optional: Handle form submission
+        document.querySelector(".submit-btn")?.addEventListener("click", () => {
+            alert("Sign up submitted!");
+            // You can submit your form here
+        });
+    </script>
+
 </body>
 
 </html>

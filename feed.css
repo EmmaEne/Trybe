@@ -1,0 +1,131 @@
+body.dark-feed {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Loader Overlay */
+.loader-overlay {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-content i {
+    color: #fff;
+}
+
+/* Sidebar styles */
+.sidebar .nav-link {
+    color: #aaa;
+    transition: background 0.2s;
+}
+
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+.sidebar button {
+    margin-top: auto;
+}
+
+/* Right Nav */
+.right-nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Vertical Arrows */
+.vertical-arrows {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    gap: 10px;
+}
+
+.arrow-btn {
+    background: #222;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.arrow-btn:hover {
+    background: #333;
+}
+
+
+/* Video */
+.video-wrapper {
+    position: relative;
+    width: 400px;
+    max-width: 90%;
+}
+
+.feed-video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Mute button */
+.mute-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 0.8;
+}
+
+/* Reactions */
+.reaction-bar {
+    position: absolute;
+    right: -70px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.reaction-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.reaction-btn i {
+    font-size: 24px;
+}
+
+.reaction-btn span {
+    display: block;
+    font-size: 12px;
+    margin-top: 0.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .sidebar {
+        display: none;
+    }
+
+    .reaction-bar {
+        right: -50px;
+    }
+
+    .right-sidebar {
+        display: none;
+    }
+}
