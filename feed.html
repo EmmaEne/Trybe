@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trybe - Feed</title>
+  <link href="./bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="feed.css" />
+</head>
+<body class="dark-feed">
+
+<!-- 🔵 Loading overlay -->
+<div id="loader" class="loader-overlay">
+  <div class="loader-content">
+    <i class="fab fa-tiktok fa-3x mb-3"></i>
+    <div class="spinner-border text-light"></div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row flex-nowrap min-vh-100">
+    <!-- Left Sidebar -->
+    <nav class="col-auto col-md-2 d-flex flex-column bg-black text-white p-3 sidebar">
+      <a href="#" class="d-flex align-items-center mb-4 text-white text-decoration-none">
+        <i class="fab fa-tiktok fa-2x me-2"></i><span class="fs-5">Trybe</span>
+      </a>
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item mb-2">
+          <a href="#" class="nav-link active text-white"><i class="fas fa-home me-2"></i> For You</a>
+        </li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link text-white"><i class="fas fa-compass me-2"></i> Explore</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link text-white"><i class="fas fa-user-friends me-2"></i> Following</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link text-white"><i class="fas fa-upload me-2"></i> Upload</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link text-white"><i class="fas fa-tv me-2"></i> LIVE</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link text-white"><i class="fas fa-user me-2"></i> Profile</a></li>
+        <li class="nav-item mb-3"><a href="#" class="nav-link text-white"><i class="fas fa-ellipsis-h me-2"></i> More</a></li>
+      </ul>
+      <button class="btn btn-danger w-100 mt-auto">Log In</button>
+    </nav>
+
+    <!-- Main Feed -->
+    <main class="col d-flex justify-content-center align-items-center position-relative py-4">
+      <div class="video-wrapper position-relative">
+        <!-- Mute Button -->
+        <button class="mute-btn btn btn-dark rounded-circle">
+          <i class="fas fa-volume-mute"></i>
+        </button>
+        <!-- Video -->
+        <video src="sample.mp4" autoplay loop muted class="feed-video"></video>
+        <!-- Reactions -->
+        <div class="reaction-bar d-flex flex-column align-items-center">
+          <img src="https://via.placeholder.com/50" class="rounded-circle mb-3" alt="Profile">
+          <button class="reaction-btn"><i class="fas fa-heart"></i><span>79K</span></button>
+          <button class="reaction-btn"><i class="fas fa-comment"></i><span>1,475</span></button>
+          <button class="reaction-btn"><i class="fas fa-bookmark"></i><span>17.4K</span></button>
+          <button class="reaction-btn"><i class="fas fa-share"></i></button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Right Sidebar -->
+    <aside class="col-auto d-none d-md-flex flex-column justify-content-start align-items-center py-4 right-sidebar">
+      <button class="btn btn-outline-light mb-3">Get App</button>
+      <button class="btn btn-light text-dark">Log In</button>
+    </aside>
+  </div>
+</div>
+
+<script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Hide loader when content is ready
+  window.addEventListener('load', function() {
+    document.getElementById('loader').style.display = 'none';
+  });
+</script>
+</body>
+</html>
