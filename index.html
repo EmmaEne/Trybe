@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>EduTok | Learn Passiveley</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white">
+
+    <!-- Mobile App Container -->
+    <div class="app-container">
+        <!-- Top Navigation (Tabs) -->
+        <header class="top-nav">
+            <div class="d-flex justify-content-center gap-4">
+                <a href="#" class="nav-tab active">Following</a>
+                <a href="#" class="nav-tab">For You</a>
+            </div>
+            <div class="search-icon">
+                <i data-lucide="search"></i>
+            </div>
+        </header>
+
+        <!-- Main Feed (Scroll Container) -->
+        <main id="video-feed" class="video-feed">
+            <!-- Videos will be injected here by app.js -->
+            <div class="skeleton-screen">
+                <div class="skeleton-video"></div>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation Bar -->
+        <footer class="bottom-nav">
+            <button class="nav-item active">
+                <i data-lucide="home"></i>
+                <span>Home</span>
+            </button>
+            <button class="nav-item">
+                <i data-lucide="compass"></i>
+                <span>Discover</span>
+            </button>
+            <button class="nav-item add-btn">
+                <div class="plus-icon">
+                    <i data-lucide="plus"></i>
+                </div>
+            </button>
+            <button class="nav-item">
+                <i data-lucide="bookmark"></i>
+                <span>Saved</span>
+            </button>
+            <button class="nav-item">
+                <i data-lucide="user"></i>
+                <span>Profile</span>
+            </button>
+        </footer>
+    </div>
+
+    <!-- Comment Drawer (Bootstrap-like offcanvas) -->
+    <div class="comment-drawer" id="commentDrawer">
+        <div class="drawer-header">
+            <h6>1,243 questions</h6>
+            <button class="close-drawer" onclick="toggleComments()">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        <div class="drawer-body">
+            <!-- Comments will be injected here -->
+            <div class="comment-item">
+                <div class="avatar-sm bg-primary bg-gradient rounded-circle"></div>
+                <div class="comment-content">
+                    <span class="username">PyWiz</span>
+                    <p class="text">Wait, so the `temp` variable isn't needed in Python 3.x?</p>
+                    <div class="actions">
+                        <span class="time">2h ago</span>
+                        <span class="reply-btn">Reply</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="drawer-footer">
+            <input type="text" placeholder="Ask a question about this lesson...">
+            <button class="send-btn"><i data-lucide="send"></i></button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
